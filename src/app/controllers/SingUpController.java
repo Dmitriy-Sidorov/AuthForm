@@ -1,4 +1,4 @@
-package sample.controllers;
+package app.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,7 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import sample.database.DatabaseHandler;
+import app.functional.DatabaseHandler;
 
 public class SingUpController {
 

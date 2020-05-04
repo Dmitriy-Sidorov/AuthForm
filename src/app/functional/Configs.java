@@ -1,4 +1,4 @@
-package sample.database;
+package app.functional;
 
 public class Configs {
     protected String dbHost = "localhost";

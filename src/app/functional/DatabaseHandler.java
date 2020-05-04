@@ -1,4 +1,4 @@
-package sample.database;
+package app.functional;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,9 +13,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DatabaseHandler extends Configs {
-    Connection dbConnection;
+    private Connection dbConnection;
 
-    public Connection getDbConnection() throws ClassNotFoundException, SQLException {
+    private Connection getDbConnection() throws ClassNotFoundException, SQLException {
         String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName
                 + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 

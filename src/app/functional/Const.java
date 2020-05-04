@@ -1,4 +1,4 @@
-package sample.database;
+package app.functional;
 
 public class Const {
     public static final String USER_TABLE = "users";
