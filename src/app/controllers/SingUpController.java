@@ -2,6 +2,8 @@ package app.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import app.functional.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -48,15 +50,29 @@ public class SingUpController {
     @FXML
     private RadioButton genderFemaleRadio;
 
+    private DatabaseHandler dbHandler = new DatabaseHandler();
+
     @FXML
     void initialize() {
-        DatabaseHandler dbHandler = new DatabaseHandler();
         singUpButton.setOnAction(event -> {
-            dbHandler.singUpUser(firstNameField.getText(), lastNameField.getText(), userNameField.getText(),
-                    passwordField.getText(), locationField.getText(), "gender");
+            signUpNewUser();
         });
         singInButton.setOnAction(event -> {
             dbHandler.loadScene(singInButton, "../view/singIn.fxml");
         });
+    }
+
+    private void signUpNewUser() {
+        String firstName = firstNameField.getText();
+        String lastName = lastNameField.getText();
+        String userName = userNameField.getText();
+        String password = passwordField.getText();
+        String location = locationField.getText();
+        RadioButton selectedRadioButton = (RadioButton) gender.getSelectedToggle();
+        String gender = selectedRadioButton.getText();
+
+        User user = new User(firstName, lastName, userName, password, location, gender);
+
+        dbHandler.singUpUser(user);
     }
 }

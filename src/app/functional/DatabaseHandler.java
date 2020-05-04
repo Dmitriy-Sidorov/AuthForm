@@ -26,19 +26,19 @@ public class DatabaseHandler extends Configs {
         return dbConnection;
     }
 
-    public void singUpUser(String firstName, String lastName, String userName, String password, String location, String gender) {
+    public void singUpUser(User user) {
         String insert = "INSERT INTO " + Const.USER_TABLE + "(" + Const.USERS_FIRSTNAME + "," + Const.USERS_LASTNAME + ","
                 + Const.USERS_USERNAME + "," + Const.USERS_PASSWORD + "," + Const.USERS_LOCATION + "," + Const.USERS_GENDER + ")"
                 + "VALUES(?,?,?,?,?,?)";
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, firstName);
-            prSt.setString(2, lastName);
-            prSt.setString(3, userName);
-            prSt.setString(4, password);
-            prSt.setString(5, location);
-            prSt.setString(6, gender);
+            prSt.setString(1, user.getFirstName());
+            prSt.setString(2, user.getLastName());
+            prSt.setString(3, user.getUserName());
+            prSt.setString(4, user.getPassword());
+            prSt.setString(5, user.getLocation());
+            prSt.setString(6, user.getGender());
 
             prSt.executeUpdate();
         } catch (SQLException e) {
