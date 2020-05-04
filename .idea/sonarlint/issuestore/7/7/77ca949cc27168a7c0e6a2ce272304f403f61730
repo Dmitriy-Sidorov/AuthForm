@@ -1,0 +1,8 @@
+
+x	java:S116,"WRename this field "region_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¸Ä”üÿÿÿÿ8è™İü.
+v	java:S116 "ZRename this field "firstName_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÑÈ±8è™İü.
+E
+java:S1148B"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8©ô¤ş.
+w	java:S116#"[Rename this field "secondName_field" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÉ¿§8è™İü.
+{	java:S1165"_Rename this field "geender_female_radio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è½ˆã8è™İü.
+y	java:S116/"]Rename this field "geender_male_radio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í°…¨8è™İü.
