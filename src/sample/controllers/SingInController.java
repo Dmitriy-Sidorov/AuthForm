@@ -1,16 +1,12 @@
 package sample.controllers;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+import sample.database.DatabaseHandler;
 
 public class SingInController {
 
@@ -24,7 +20,7 @@ public class SingInController {
     private PasswordField passwordField;
 
     @FXML
-    private TextField loginField;
+    private TextField userNameField;
 
     @FXML
     private Button singUpButton;
@@ -34,22 +30,9 @@ public class SingInController {
 
     @FXML
     void initialize() {
+        DatabaseHandler dbHandler = new DatabaseHandler();
         singUpButton.setOnAction(event -> {
-            singUpButton.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../view/singUp.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent scene = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(scene));
-            stage.show();
+            dbHandler.loadScene(singUpButton, "../view/singUp.fxml");
         });
     }
 }

@@ -19,7 +19,7 @@
             <Font size="20.0" />
          </font>
       </PasswordField>
-      <TextField fx:id="loginField" layoutX="111.0" layoutY="188.0" prefHeight="45.0" prefWidth="213.0" promptText="Logoin">
+      <TextField fx:id="userNameField" layoutX="111.0" layoutY="188.0" prefHeight="45.0" prefWidth="213.0" promptText="Logoin">
          <font>
             <Font size="20.0" />
          </font>

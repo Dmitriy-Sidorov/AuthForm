@@ -1,18 +1,14 @@
 package sample.controllers;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import javafx.stage.Stage;
+import sample.database.DatabaseHandler;
 
 public class SingUpController {
 
@@ -29,47 +25,38 @@ public class SingUpController {
     private Button singUpButton;
 
     @FXML
-    private TextField firstName_field;
+    private TextField firstNameField;
 
     @FXML
-    private TextField secondName_field;
+    private TextField lastNameField;
 
     @FXML
-    private TextField loginField;
+    private TextField userNameField;
 
     @FXML
     private PasswordField passwordField;
 
     @FXML
-    private TextField region_field;
+    private TextField locationField;
 
     @FXML
-    private RadioButton geender_male_radio;
+    private RadioButton genderMaleRadio;
 
     @FXML
     private ToggleGroup gender;
 
     @FXML
-    private RadioButton geender_female_radio;
+    private RadioButton genderFemaleRadio;
 
     @FXML
     void initialize() {
+        DatabaseHandler dbHandler = new DatabaseHandler();
+        singUpButton.setOnAction(event -> {
+            dbHandler.singUpUser(firstNameField.getText(), lastNameField.getText(), userNameField.getText(),
+                    passwordField.getText(), locationField.getText(), "gender");
+        });
         singInButton.setOnAction(event -> {
-            singInButton.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../view/singIn.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent scene = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(scene));
-            stage.show();
+            dbHandler.loadScene(singInButton, "../view/singIn.fxml");
         });
     }
 }

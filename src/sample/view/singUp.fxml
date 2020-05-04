@@ -38,7 +38,7 @@
           <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="firstName_field" prefHeight="50.0" promptText="Logoin" GridPane.columnSpan="2">
+            <TextField fx:id="firstNameField" prefHeight="50.0" promptText="Logoin" GridPane.columnSpan="2">
                <font>
                   <Font size="18.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="secondName_field" prefHeight="50.0" promptText="Logoin" GridPane.columnIndex="2" GridPane.columnSpan="2">
+            <TextField fx:id="lastNameField" prefHeight="50.0" promptText="Logoin" GridPane.columnIndex="2" GridPane.columnSpan="2">
                <font>
                   <Font size="18.0" />
                </font>
@@ -54,7 +54,7 @@
                   <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="loginField" prefHeight="50.0" promptText="Logoin" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <TextField fx:id="userNameField" prefHeight="50.0" promptText="Logoin" GridPane.columnSpan="2" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -70,7 +70,7 @@
                   <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
                </GridPane.margin>
             </PasswordField>
-            <TextField fx:id="region_field" prefHeight="50.0" promptText="Logoin" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <TextField fx:id="locationField" prefHeight="50.0" promptText="Logoin" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
@@ -78,7 +78,7 @@
                   <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
                </GridPane.margin>
             </TextField>
-            <RadioButton fx:id="geender_male_radio" mnemonicParsing="false" selected="true" text="Male" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <RadioButton fx:id="genderMaleRadio" mnemonicParsing="false" selected="true" text="Male" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
                </GridPane.margin>
@@ -86,7 +86,7 @@
                   <ToggleGroup fx:id="gender" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="geender_female_radio" mnemonicParsing="false" text="Female" toggleGroup="$gender" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <RadioButton fx:id="genderFemaleRadio" mnemonicParsing="false" text="Female" toggleGroup="$gender" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
                </GridPane.margin>
